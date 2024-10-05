@@ -1,0 +1,18 @@
+{"time":"2024-10-05T21:52:35.639252347+02:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-05T21:52:35.639265332+02:00","level":"INFO","msg":"created symlink","path":"/home/hpc/v100dd/v100dd18/dpo/trl/wandb/run-20241005_215235-b98zuxo3/logs/debug-core.log"}
+{"time":"2024-10-05T21:52:35.643002333+02:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-05T21:52:35.67486291+02:00","level":"INFO","msg":"created new stream","id":"b98zuxo3"}
+{"time":"2024-10-05T21:52:35.674880753+02:00","level":"INFO","msg":"stream: started","id":"b98zuxo3"}
+{"time":"2024-10-05T21:52:35.67490016+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"b98zuxo3"}}
+{"time":"2024-10-05T21:52:35.674918956+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"b98zuxo3"}}
+{"time":"2024-10-05T21:52:35.674916391+02:00","level":"INFO","msg":"sender: started","stream_id":{"value":"b98zuxo3"}}
+{"time":"2024-10-05T21:53:05.679188035+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2024-10-05T21:53:37.992289618+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2024-10-05T21:54:12.362746741+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2024-10-05T21:54:37.674572609+02:00","level":"INFO","msg":"stream: closing","id":"b98zuxo3"}
+{"time":"2024-10-05T21:54:37.674712865+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"b98zuxo3"}}
+{"time":"2024-10-05T21:54:37.674728635+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"b98zuxo3"}}
+{"time":"2024-10-05T21:54:37.674766437+02:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: POST https://api.wandb.ai/graphql giving up after 4 attempt(s): context canceled"}
+{"time":"2024-10-05T21:54:37.674796444+02:00","level":"ERROR","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Defer":{}}}},"control":{"always_send":true}}}}
+{"time":"2024-10-05T21:54:37.68084426+02:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"b98zuxo3"}}
+{"time":"2024-10-05T21:54:37.680873025+02:00","level":"INFO","msg":"stream: closed","id":"b98zuxo3"}

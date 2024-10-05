@@ -1,0 +1,21 @@
+{"time":"2024-10-05T22:05:03.74774687+02:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2024-10-05T22:05:03.74776208+02:00","level":"INFO","msg":"created symlink","path":"/home/hpc/v100dd/v100dd18/dpo/trl/wandb/run-20241005_220503-gzdk5kws/logs/debug-core.log"}
+{"time":"2024-10-05T22:05:03.748355364+02:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2024-10-05T22:05:03.748361944+02:00","level":"INFO","msg":"created symlink","path":"/home/hpc/v100dd/v100dd18/dpo/trl/wandb/run-20241005_220503-gzdk5kws/logs/debug-core.log"}
+{"time":"2024-10-05T22:05:03.790163751+02:00","level":"INFO","msg":"created new stream","id":"gzdk5kws"}
+{"time":"2024-10-05T22:05:03.790208422+02:00","level":"INFO","msg":"stream: started","id":"gzdk5kws"}
+{"time":"2024-10-05T22:05:03.790250903+02:00","level":"INFO","msg":"sender: started","stream_id":{"value":"gzdk5kws"}}
+{"time":"2024-10-05T22:05:03.790235782+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"gzdk5kws"}}
+{"time":"2024-10-05T22:05:03.790290924+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"gzdk5kws"}}
+{"time":"2024-10-05T22:05:04.133553472+02:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-05T22:05:04.139347174+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-05T22:05:04.516729644+02:00","level":"INFO","msg":"stream: closing","id":"gzdk5kws"}
+{"time":"2024-10-05T22:05:04.51700171+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-05T22:05:04.517125673+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-05T22:05:05.014354206+02:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-10-05T22:05:05.014381736+02:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-10-05T22:05:05.014387626+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-10-05T22:05:05.738382081+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"gzdk5kws"}}
+{"time":"2024-10-05T22:05:05.738425422+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"gzdk5kws"}}
+{"time":"2024-10-05T22:05:05.738471733+02:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"gzdk5kws"}}
+{"time":"2024-10-05T22:05:05.740014598+02:00","level":"INFO","msg":"stream: closed","id":"gzdk5kws"}

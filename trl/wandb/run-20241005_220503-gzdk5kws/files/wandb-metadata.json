@@ -1,0 +1,13 @@
+{
+  "os":  "Linux-4.18.0-553.8.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python":  "3.10.14",
+  "startedAt":  "2024-10-05T20:05:03.743756Z",
+  "program":  "/home/hpc/v100dd/v100dd18/dpo/trl/fei.py",
+  "codePath":  "fei.py",
+  "email":  "pl03818948@gmail.com",
+  "root":  "/home/hpc/v100dd/v100dd18/dpo/trl",
+  "host":  "alex2.nhr.fau.de",
+  "username":  "v100dd18",
+  "executable":  "/home/hpc/v100dd/v100dd18/miniconda3/envs/openinstruct/bin/python",
+  "codePathLocal":  "fei.py"
+}

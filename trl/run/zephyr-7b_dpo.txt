@@ -1,0 +1,57 @@
+### Starting TaskPrologue of job 2084586 on a1622 at Fri Oct  4 23:14:27 CEST 2024
+Running on cores 64-79 with governor ondemand
+Fri Oct  4 23:14:27 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:81:00.0 Off |                  Off |
+|  0%   33C    P8             22W /  300W |       1MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+start to run
+True
+CUDA_HOME is set to /home/hpc/v100dd/v100dd18/cuda-12.6
+PATH is set to /home/hpc/v100dd/v100dd18/cuda-12.6/bin:/home/hpc/v100dd/v100dd18/cuda-12.6/bin:/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/bin:/home/hpc/v100dd/v100dd18/miniconda3/bin:/home/hpc/v100dd/v100dd18/miniconda3/condabin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/hpc-workspace/1.4.0/bin:/apps/hpc-workspace/1.4.0/bin
+[2024-10-04 23:14:36,145] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/hpc/v100dd/v100dd18/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1. read arguments
+2. read model & tokenizer
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  4.23it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  4.48it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  4.73it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  4.63it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  8.28it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  8.55it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  8.73it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  8.65it/s]
+3. read dataset
+Map:   0%|          | 0/62135 [00:00<?, ? examples/s]Map:   1%|          | 492/62135 [00:00<00:12, 4884.23 examples/s]Map:   2%|▏         | 1000/62135 [00:00<00:17, 3414.03 examples/s]Map:   3%|▎         | 1563/62135 [00:00<00:14, 4216.98 examples/s]Map:   3%|▎         | 2091/62135 [00:00<00:13, 4576.51 examples/s]Map:   4%|▍         | 2666/62135 [00:00<00:11, 4958.89 examples/s]Map:   5%|▌         | 3200/62135 [00:00<00:11, 5077.71 examples/s]Map:   6%|▌         | 3773/62135 [00:00<00:11, 5278.27 examples/s]Map:   7%|▋         | 4589/62135 [00:00<00:10, 5340.49 examples/s]Map:   9%|▊         | 5405/62135 [00:01<00:10, 5372.60 examples/s]Map:  10%|▉         | 5979/62135 [00:01<00:10, 5464.36 examples/s]Map:  11%|█         | 6802/62135 [00:01<00:10, 5469.86 examples/s]Map:  12%|█▏        | 7620/62135 [00:01<00:09, 5460.37 examples/s]Map:  14%|█▎        | 8439/62135 [00:01<00:09, 5457.79 examples/s]Map:  14%|█▍        | 9000/62135 [00:01<00:09, 5449.41 examples/s]Map:  15%|█▌        | 9565/62135 [00:01<00:09, 5497.58 examples/s]Map:  17%|█▋        | 10381/62135 [00:01<00:09, 5471.99 examples/s]Map:  18%|█▊        | 10931/62135 [00:02<00:09, 5475.14 examples/s]Map:  19%|█▉        | 11691/62135 [00:02<00:09, 5331.43 examples/s]Map:  20%|██        | 12509/62135 [00:02<00:09, 5368.76 examples/s]Map:  21%|██▏       | 13312/62135 [00:02<00:09, 5360.13 examples/s]Map:  22%|██▏       | 13888/62135 [00:02<00:08, 5452.43 examples/s]Map:  24%|██▎       | 14706/62135 [00:02<00:08, 5450.40 examples/s]Map:  25%|██▍       | 15519/62135 [00:02<00:08, 5438.09 examples/s]Map:  26%|██▋       | 16338/62135 [00:03<00:08, 5442.05 examples/s]Map:  27%|██▋       | 16915/62135 [00:03<00:08, 5515.26 examples/s]Map:  29%|██▊       | 17745/62135 [00:03<00:08, 5516.87 examples/s]Map:  30%|██▉       | 18568/62135 [00:03<00:07, 5499.11 examples/s]Map:  31%|███       | 19392/62135 [00:03<00:07, 5493.64 examples/s]Map:  32%|███▏      | 19965/62135 [00:03<00:07, 5544.62 examples/s]Map:  33%|███▎      | 20770/62135 [00:03<00:07, 5482.46 examples/s]Map:  35%|███▍      | 21578/62135 [00:04<00:07, 5447.44 examples/s]Map:  36%|███▌      | 22394/62135 [00:04<00:07, 5442.07 examples/s]Map:  37%|███▋      | 22964/62135 [00:04<00:07, 5499.73 examples/s]Map:  38%|███▊      | 23782/62135 [00:04<00:06, 5480.47 examples/s]Map:  40%|███▉      | 24598/62135 [00:04<00:06, 5463.69 examples/s]Map:  41%|████      | 25416/62135 [00:04<00:06, 5458.44 examples/s]Map:  42%|████▏     | 25992/62135 [00:04<00:06, 5525.20 examples/s]Map:  43%|████▎     | 26813/62135 [00:04<00:06, 5506.56 examples/s]Map:  44%|████▍     | 27632/62135 [00:05<00:06, 5488.36 examples/s]Map:  46%|████▌     | 28451/62135 [00:05<00:06, 5476.83 examples/s]Map:  47%|████▋     | 29000/62135 [00:05<00:06, 5459.47 examples/s]Map:  48%|████▊     | 29567/62135 [00:05<00:05, 5509.33 examples/s]Map:  49%|████▉     | 30386/62135 [00:05<00:05, 5488.99 examples/s]Map:  50%|████▉     | 30961/62135 [00:05<00:05, 5550.05 examples/s]Map:  51%|█████     | 31781/62135 [00:05<00:05, 5516.80 examples/s]Map:  52%|█████▏    | 32588/62135 [00:06<00:05, 5469.00 examples/s]Map:  54%|█████▍    | 33406/62135 [00:06<00:05, 5462.45 examples/s]Map:  55%|█████▍    | 33979/62135 [00:06<00:05, 5523.58 examples/s]Map:  56%|█████▌    | 34793/62135 [00:06<00:04, 5488.53 examples/s]Map:  57%|█████▋    | 35610/62135 [00:06<00:04, 5473.59 examples/s]Map:  59%|█████▊    | 36430/62135 [00:06<00:04, 5466.99 examples/s]Map:  60%|█████▉    | 36978/62135 [00:06<00:04, 5467.35 examples/s]Map:  61%|██████    | 37784/62135 [00:06<00:04, 5431.36 examples/s]Map:  62%|██████▏   | 38606/62135 [00:07<00:04, 5443.62 examples/s]Map:  63%|██████▎   | 39436/62135 [00:07<00:04, 5468.90 examples/s]Map:  64%|██████▍   | 40000/62135 [00:07<00:04, 5458.39 examples/s]Map:  65%|██████▌   | 40571/62135 [00:07<00:03, 5516.29 examples/s]Map:  67%|██████▋   | 41392/62135 [00:07<00:03, 5499.76 examples/s]Map:  68%|██████▊   | 41972/62135 [00:07<00:03, 5570.58 examples/s]Map:  69%|██████▉   | 42794/62135 [00:07<00:03, 5536.68 examples/s]Map:  70%|███████   | 43625/62135 [00:08<00:03, 5535.78 examples/s]Map:  72%|███████▏  | 44457/62135 [00:08<00:03, 5535.50 examples/s]Map:  73%|███████▎  | 45289/62135 [00:08<00:03, 5529.78 examples/s]Map:  74%|███████▍  | 45865/62135 [00:08<00:02, 5582.31 examples/s]Map:  75%|███████▌  | 46690/62135 [00:08<00:02, 5551.32 examples/s]Map:  76%|███████▋  | 47509/62135 [00:08<00:02, 5519.59 examples/s]Map:  78%|███████▊  | 48333/62135 [00:08<00:02, 5507.16 examples/s]Map:  79%|███████▊  | 48907/62135 [00:09<00:02, 5559.91 examples/s]Map:  80%|████████  | 49735/62135 [00:09<00:02, 5544.11 examples/s]Map:  81%|████████▏ | 50573/62135 [00:09<00:02, 5529.31 examples/s]Map:  83%|████████▎ | 51399/62135 [00:09<00:01, 5518.89 examples/s]Map:  84%|████████▎ | 51977/62135 [00:09<00:01, 5578.19 examples/s]slurmstepd: error: *** JOB 2084586 ON a1622 CANCELLED AT 2024-10-04T23:21:36 ***
+=== JOB_STATISTICS ===
+=== current date     : Fri Oct  4 23:21:39 CEST 2024
+= Job-ID             : 2084586 on alex
+= Job-Name           : zephyr-7b_dpo
+= Job-Command        : /home/hpc/v100dd/v100dd18/dpo/trl/run/run_dpo.sh
+= Initial workdir    : /home/hpc/v100dd/v100dd18/dpo/trl/run
+= Queue/Partition    : a40
+= Slurm account      : v100dd with QOS=normal
+= Requested resources:  for 1-00:00:00
+= Elapsed runtime    : 00:07:10
+= Total RAM usage    : 0.4 GiB of assigned  GiB (%)
+= Node list          : a1622
+= Subm/Elig/Start/End: 2024-10-04T23:14:24 / 2024-10-04T23:14:24 / 2024-10-04T23:14:26 / 2024-10-04T23:21:36
+======================
+=== Quota infos ======
+    Path              Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+!!! /home/hpc          111.7G   104.9G   209.7G  -29703days     167K     500K   1,000K        N/A !!!
+    /home/vault          0.0K  1048.6G  2097.2G        N/A       1      200K     400K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]

@@ -1,0 +1,124 @@
+### Starting TaskPrologue of job 2084134 on a0521 at Fri Oct  4 15:18:16 CEST 2024
+Running on cores 0-15 with governor ondemand
+Fri Oct  4 15:18:16 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:01:00.0 Off |                  Off |
+|  0%   44C    P8             23W /  300W |       1MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+start to run
+True
+CUDA_HOME is set to /home/hpc/v100dd/v100dd18/cuda-12.6
+PATH is set to /home/hpc/v100dd/v100dd18/cuda-12.6/bin:/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/bin:/home/hpc/v100dd/v100dd18/miniconda3/bin:/home/hpc/v100dd/v100dd18/miniconda3/condabin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/hpc-workspace/1.4.0/bin:/apps/hpc-workspace/1.4.0/bin
+[2024-10-04 15:18:26,127] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/hpc/v100dd/v100dd18/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+1. read arguments
+2. read model & tokenizer
+Traceback (most recent call last):
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connection.py", line 208, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x147eff0195d0>, 'Connection to cdn-lfs-us-1.hf.co timed out. (connect timeout=10)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Max retries exceeded with url: /repos/0b/33/0b33b40e3f2f21c5ce568ad74f4179cf394bc859d143cc271bc0eccb0a91735b/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1728307108&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyODMwNzEwOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzBiLzMzLzBiMzNiNDBlM2YyZjIxYzVjZTU2OGFkNzRmNDE3OWNmMzk0YmM4NTlkMTQzY2MyNzFiYzBlY2NiMGE5MTczNWIvMTMwMjgyYWYwZGZhOWZlNTg0MDczN2NjNDlhMGQzMzlkMDYwNzVmODNjNWEzMTVjMzM3MmM5YTA3NDBkMGI5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=Q8eww5BP918~4bRE4MqeH0FoJdGk6-DGndTldGSCrSDm6RR34FCZUwfFgu5BFGgK60q-VgGTFfGBvzdStfkE69j4ioJeI4Q3sC6hm9HwROfMODhm6Nj-2Lw3GsPxhYPsv8jC4j2Z5BpeelWQEPdRkuTiUHeoKrwUpREqZ3wrli7d2xXtIx1ufzu4GGtBy0te~i1mvL6UlD1kL6C-vv8zl3CzBxVEzVQ6An8jfeQV5Zef85ivEPF3JWudDhB5-gX9E-0NMaonXYDjJzSOBLvPfYZ0fciF8Evp0jNlN1TrpzDqwu75mDoA9aqBTAecVQ1PV2KdKHak0jKBI0BaRLXCJw__&Key-Pair-Id=K24J24Z295AEI9 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x147eff0195d0>, 'Connection to cdn-lfs-us-1.hf.co timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hpc/v100dd/v100dd18/dpo/trl/dpo_Tong.py", line 273, in <module>
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3604, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1232, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1381, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1915, in _download_to_tmp_and_move
+    http_get(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 455, in http_get
+    r = _request_wrapper(
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 387, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "/home/hpc/v100dd/v100dd18/miniconda3/envs/simpo/lib/python3.10/site-packages/requests/adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Max retries exceeded with url: /repos/0b/33/0b33b40e3f2f21c5ce568ad74f4179cf394bc859d143cc271bc0eccb0a91735b/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1728307108&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyODMwNzEwOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzBiLzMzLzBiMzNiNDBlM2YyZjIxYzVjZTU2OGFkNzRmNDE3OWNmMzk0YmM4NTlkMTQzY2MyNzFiYzBlY2NiMGE5MTczNWIvMTMwMjgyYWYwZGZhOWZlNTg0MDczN2NjNDlhMGQzMzlkMDYwNzVmODNjNWEzMTVjMzM3MmM5YTA3NDBkMGI5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=Q8eww5BP918~4bRE4MqeH0FoJdGk6-DGndTldGSCrSDm6RR34FCZUwfFgu5BFGgK60q-VgGTFfGBvzdStfkE69j4ioJeI4Q3sC6hm9HwROfMODhm6Nj-2Lw3GsPxhYPsv8jC4j2Z5BpeelWQEPdRkuTiUHeoKrwUpREqZ3wrli7d2xXtIx1ufzu4GGtBy0te~i1mvL6UlD1kL6C-vv8zl3CzBxVEzVQ6An8jfeQV5Zef85ivEPF3JWudDhB5-gX9E-0NMaonXYDjJzSOBLvPfYZ0fciF8Evp0jNlN1TrpzDqwu75mDoA9aqBTAecVQ1PV2KdKHak0jKBI0BaRLXCJw__&Key-Pair-Id=K24J24Z295AEI9 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x147eff0195d0>, 'Connection to cdn-lfs-us-1.hf.co timed out. (connect timeout=10)'))"), '(Request ID: 78841e51-b6e4-40ee-afa5-e2c90f7dd3ba)')
+=== JOB_STATISTICS ===
+=== current date     : Fri Oct  4 15:19:09 CEST 2024
+= Job-ID             : 2084134 on alex
+= Job-Name           : Qwen2_dpo
+= Job-Command        : /home/hpc/v100dd/v100dd18/dpo/trl/run/run_dpo.sh
+= Initial workdir    : /home/hpc/v100dd/v100dd18/dpo/trl/run
+= Queue/Partition    : a40
+= Slurm account      : v100dd with QOS=normal
+= Requested resources:  for 1-00:00:00
+= Elapsed runtime    : 00:00:54
+= Total RAM usage    : 0.4 GiB of assigned  GiB (%)
+= Node list          : a0521
+= Subm/Elig/Start/End: 2024-10-04T15:18:14 / 2024-10-04T15:18:14 / 2024-10-04T15:18:15 / 2024-10-04T15:19:09
+======================
+=== Quota infos ======
+    Path              Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/hpc           77.7G   104.9G   209.7G        N/A     159K     500K   1,000K        N/A    
+    /home/vault          0.0K  1048.6G  2097.2G        N/A       1      200K     400K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
